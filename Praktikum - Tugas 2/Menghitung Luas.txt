@@ -1,0 +1,74 @@
+import java.util.*;
+
+class Persegi{
+    int sisi;
+
+    Persegi(int sisi){
+        this.sisi = sisi;
+    }
+    void showluasPersegi(){
+        int luas = sisi*sisi;
+        System.out.println(luas);
+    }
+}
+
+class Segitiga{
+    int alas;
+    int tinggi;
+
+    Segitiga(int alas, int tinggi){
+        this.alas = alas;
+        this.tinggi = tinggi;
+    }
+
+    void showluasSagitiga(){
+        int luas = (alas*tinggi)/2;
+        System.out.println(luas);
+    }
+}
+
+class Lingkaran{
+    int r;
+
+    Lingkaran(int r){
+        this.r = r;
+    }
+
+    void showLingkaran1(){
+        int luas = (int) (22/7*r*r);
+        System.out.println((double)luas);
+    }
+
+    void showLingkaran2(){
+        int luas = (int) (3.14*Math.pow(r, 2));
+        System.out.println((double)luas);
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int pilih = in.nextInt();
+
+        if(pilih == 1){
+            Persegi persegi = new Persegi(in.nextInt());
+            persegi.showluasPersegi();
+        } else if(pilih == 2){
+            Segitiga segitiga = new Segitiga(in.nextInt(), in.nextInt());
+            segitiga.showluasSagitiga();
+        } else if(pilih == 3){
+            int jari = in.nextInt();
+            if(jari % 7 == 0){
+                Lingkaran lingkaran = new Lingkaran(jari);
+                lingkaran.showLingkaran1();
+            }
+            else{
+                Lingkaran lingkaran = new Lingkaran(jari);
+                lingkaran.showLingkaran2();
+            }
+        } else{
+            System.out.println("Input yang anda masukan tidak sesuai");
+        }
+    }
+}

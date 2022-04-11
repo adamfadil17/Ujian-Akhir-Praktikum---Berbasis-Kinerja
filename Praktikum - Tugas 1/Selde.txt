@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+
+public class Main {
+
+     //Mengecek Angka tersebut Selde atau Bukan
+    public static boolean seldePembuktian(int angka) {
+        int selde;
+        selde = angka;
+
+        if (selde != aturanBalik(angka)) {
+            System.out.println(angka + " bukan selde.");
+        } else {
+            System.out.println(angka + " adalah selde.");
+        }
+
+        return true;
+
+    }
+
+    //Mengecek Kondisi Angka ketika Dibalik
+    public static int aturanBalik(int angka){
+        int sisa;
+        int hasil = 0;
+        
+            while(angka > 0){
+                sisa = angka%10;
+                hasil = (hasil*10) + sisa;
+                angka = angka/10;
+            }
+            return hasil;
+    }
+    
+    public static void main(String[] args) {
+
+        int angka;
+        Scanner in  = new Scanner(System.in);
+        angka = in.nextInt();
+        
+        seldePembuktian(angka);
+    }
+}
