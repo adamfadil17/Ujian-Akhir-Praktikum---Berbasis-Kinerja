@@ -14,4 +14,4 @@ Hey everyone, my name is Adam Fadilah Islamawan. Iam 20 y.o and I undergraduated
 - Strong in Designing 🤩
 - Anti deadliner 🙌
 - Mudah Capek 😒
-- Competitive Persong 😎
+- Competitive Person 😎
